@@ -1,0 +1,22 @@
+# Tree-sitter
+Cargo.lock
+node_modules
+build
+*.log
+package-lock.json
+/target/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.lib
+*.exp
+
+# Custom
+test.jsfx
+test.jsfx-inc
+test.html
+*.not
+*.pro

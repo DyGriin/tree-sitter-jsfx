@@ -1,0 +1,50 @@
+====================================
+section
+====================================
+@init
+desc: foo
+
+---
+
+(program
+    (code_section
+        (section_name)
+        (raw_text)
+    )
+)
+
+====================================
+section with parameters
+====================================
+@foo bar baz
+.....
+
+---
+
+(program
+    (code_section
+        (section_name) (section_parameters)
+        (raw_text)
+    )
+)
+
+====================================
+section without code
+====================================
+@init
+@foo bar
+@baz
+
+
+@sample
+
+---
+
+(program
+    (code_section (section_name))
+    (code_section
+        (section_name) (section_parameters)
+    )
+    (code_section (section_name) (raw_text))
+    (code_section (section_name))
+)

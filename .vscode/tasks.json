@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "tree-sitter",
+			"args": [
+				"generate",
+			],
+			"label": "tree-sitter: generate",
+			"detail": "generate parser",
+			"problemMatcher": [],
+		},
+		{
+			"type": "shell",
+			"command": "tree-sitter",
+			"args": [
+				"test",
+			],
+			"label": "tree-sitter: test",
+			"detail": "test parser",
+			"problemMatcher": [],
+			"dependsOn": ["tree-sitter: generate"]
+		},
+		{
+			"type": "shell",
+			"command": "tree-sitter",
+			"args": [
+				"test",
+				"-f",
+				"${input:testcase}",
+			],
+			"label": "tree-sitter: testcase",
+			"detail": "test parser",
+			"problemMatcher": [],
+		},
+	],
+	"inputs": [
+		{
+			"id": "testcase",
+			"description": "Test case name",
+			"default": "",
+			"type": "promptString",
+		}
+	]
+}

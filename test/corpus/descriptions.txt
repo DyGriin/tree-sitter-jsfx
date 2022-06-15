@@ -1,0 +1,139 @@
+====================================
+description
+====================================
+
+desc:
+in_pin: none
+out_pin://out pin
+
+---
+
+(program
+    (description (description_field))
+    (description
+        (description_field) (description_detail))
+    (description
+        (description_field) (description_detail))
+)
+
+====================================
+unknown description field
+====================================
+desc  :
+  in_pin:
+foo:
+slider0:
+slider65:
+import
+importfile
+slider90:
+
+---
+
+(program)
+
+====================================
+description and section
+====================================
+   @init
+desc:
+
+@init
+---
+
+(program
+    (description (description_field))
+    (code_section (section_name))
+)
+
+====================================
+import description
+====================================
+import foo bar
+
+---
+
+(program (import_description (description_detail)))
+
+====================================
+slider description
+====================================
+slider9:v=0<0, 1, 1> Foo
+slider59: /foo=0<bar>bar
+slider64: foo == 3<bar>  <bar>
+
+---
+
+(program
+    (slider_description (slider_field) (slider_identifier) (slider_name))
+    (slider_description (slider_field) (slider_identifier) (slider_name))
+    (slider_description (slider_field) (slider_identifier) (slider_name))
+)
+
+====================================
+slider hidden prefix
+====================================
+slider1: foo<bar>   ---
+slider1: foo<bar> ----
+
+---
+
+(program
+    (slider_description (slider_field))
+    (slider_description (slider_field) (slider_name))
+)
+
+====================================
+slider description field (& default) only
+====================================
+slider1:
+slider1: foo bar
+slider1: =foo
+slider1: foo<
+slider1: foo<bar
+slider1: foo<bar>
+
+---
+
+(program
+    (slider_description (slider_field))
+    (slider_description (slider_field))
+    (slider_description (slider_field))
+    (slider_description (slider_field))
+    (slider_description (slider_field))
+    (slider_description (slider_field))
+)
+
+====================================
+slider description incomplete
+====================================
+slider1: foo bar=baz
+slider1: foo bar=<>
+slider1:<bar>baz
+
+---
+
+(program
+    (slider_description (slider_field) (slider_identifier))
+    (slider_description (slider_field) (slider_identifier))
+    (slider_description (slider_field) (slider_name))
+)
+
+====================================
+slider path description
+====================================
+slider1:/foo/ bar:foo:Bar
+slider1:/::Bar
+slider1:/
+slider1:/foo:
+slider1:/foo::
+
+---
+
+(program
+    (slider_description (slider_field) (slider_name))
+    (slider_description (slider_field) (slider_name))
+    (slider_description (slider_field))
+    (slider_description (slider_field))
+    (slider_description (slider_field))
+)
