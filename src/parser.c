@@ -66,7 +66,7 @@ static const char * const ts_symbol_names[] = {
   [sym_slider_field] = "slider_field",
   [sym_slider_identifier] = "slider_identifier",
   [sym__slider_default] = "_slider_default",
-  [sym__slider_hidden_prefix] = "_slider_hidden_prefix",
+  [sym__slider_hidden_prefix] = "---",
   [sym_program] = "program",
   [aux_sym__description_section] = "_description_section",
   [sym_code_section] = "code_section",
@@ -183,8 +183,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = true,
   },
   [sym__slider_hidden_prefix] = {
-    .visible = false,
-    .named = true,
+    .visible = true,
+    .named = false,
   },
   [sym_program] = {
     .visible = true,

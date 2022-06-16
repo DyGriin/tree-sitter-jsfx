@@ -66,7 +66,7 @@ module.exports = grammar({
             optional($._slider_info_body),
             optional(seq(
                 ">",
-                optional($._slider_hidden_prefix),
+                optional(alias($._slider_hidden_prefix, "---")),
                 optional(alias($.raw_text_single_line, $.slider_name))
             ))
         ),

@@ -249,8 +249,13 @@
                   "type": "CHOICE",
                   "members": [
                     {
-                      "type": "SYMBOL",
-                      "name": "_slider_hidden_prefix"
+                      "type": "ALIAS",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_slider_hidden_prefix"
+                      },
+                      "named": false,
+                      "value": "---"
                     },
                     {
                       "type": "BLANK"

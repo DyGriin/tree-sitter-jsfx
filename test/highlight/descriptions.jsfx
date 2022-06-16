@@ -1,0 +1,28 @@
+out_pin: none
+// <- keyword
+out_pin: none
+//     ^ punctuation.delimiter
+import foo.jsfx-inc
+// <- keyword
+
+slider1:/:::
+// <- keyword
+slider1:/:::
+//     ^^ punctuation.delimiter
+slider1:/:::
+//        ^ punctuation.delimiter
+
+slider32: var == 5<0, 1, 1> ----<>
+// <- keyword
+slider32: var == 5<0, 1, 1> ----<>
+//      ^ punctuation.delimiter
+slider32: var == 5<0, 1, 1> ----<>
+//           ^ variable.parameter
+slider32: var == 5<0, 1, 1> ----<>
+//            ^ operator
+slider32: var == 5<0, 1, 1> ----<>
+//                ^ punctuation.bracket
+slider32: var == 5<0, 1, 1> ----<>
+//                        ^ punctuation.bracket
+slider32: var == 5<0, 1, 1> ----<>
+//                            ^ operator

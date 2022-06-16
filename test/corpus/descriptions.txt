@@ -124,6 +124,7 @@ slider path description
 ====================================
 slider1:/foo/ bar:foo:Bar
 slider1:/::Bar
+slider1:/:::
 slider1:/
 slider1:/foo:
 slider1:/foo::
@@ -131,6 +132,7 @@ slider1:/foo::
 ---
 
 (program
+    (slider_description (slider_field) (slider_name))
     (slider_description (slider_field) (slider_name))
     (slider_description (slider_field) (slider_name))
     (slider_description (slider_field))
