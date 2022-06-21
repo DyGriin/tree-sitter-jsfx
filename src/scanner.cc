@@ -14,11 +14,16 @@ enum TokenType
     kSliderHiddenPrefix
 };
 
-inline bool isEol(const TSLexer* lexer)
+static inline bool isEol(const TSLexer* lexer)
 {
     return lexer->lookahead == '\r' || lexer->eof(lexer) ||
            lexer->lookahead == '\n';
 }
+
+// patch for web-tree-sitter
+#ifdef __wasm__
+#  define iswblank(ch) ((ch) == ' ' || (ch) == '\t')
+#endif
 
 class DescFieldScanner
 {
