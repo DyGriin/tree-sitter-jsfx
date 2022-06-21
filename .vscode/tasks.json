@@ -34,6 +34,16 @@
 			"detail": "test parser",
 			"problemMatcher": [],
 		},
+		{
+			"type": "shell",
+			"command": "tree-sitter",
+			"args": [
+				"build-wasm",
+			],
+			"label": "tree-sitter: build wasm",
+			"detail": "test parser",
+			"problemMatcher": [],
+		},
 	],
 	"inputs": [
 		{

@@ -13,6 +13,7 @@ package-lock.json
 *.obj
 *.lib
 *.exp
+*.wasm
 
 # Custom
 test.jsfx
