@@ -1,12 +1,12 @@
 {
   "name": "tree-sitter-jsfx",
   "version": "0.1.0",
-  "description": "",
+  "description": "Reaper JSFX grammar for tree-sitter",
   "main": "grammar.js",
   "scripts": {
     "test": "tree-sitter test"
   },
-  "author": "",
+  "author": "DyGriin",
   "license": "MIT",
   "dependencies": {
     "nan": "^2.15.0"
@@ -14,6 +14,7 @@
   "devDependencies": {
     "tree-sitter-cli": "^0.20.6"
   },
+  "repository": "https://github.com/DyGriin/tree-sitter-jsfx",
   "tree-sitter": [{
     "scope": "source.jsfx",
     "file-types": ["jsfx", "jsfx-inc"]

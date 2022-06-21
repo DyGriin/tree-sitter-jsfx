@@ -1,10 +1,10 @@
 [package]
-name = "tree-sitter-eel"
-description = "eel grammar for the tree-sitter parsing library"
+name = "tree-sitter-jsfx"
+description = "Reaper JSFX grammar for the tree-sitter parsing library"
 version = "0.0.1"
-keywords = ["incremental", "parsing", "eel"]
+keywords = ["incremental", "parsing", "jsfx"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/tree-sitter/tree-sitter-eel"
+repository = "https://github.com/DyGriin/tree-sitter-jsfx"
 edition = "2018"
 license = "MIT"
 
