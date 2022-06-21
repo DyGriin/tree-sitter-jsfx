@@ -4,7 +4,7 @@
 
 using namespace v8;
 
-extern "C" TSLanguage * tree_sitter_eel();
+extern "C" TSLanguage * tree_sitter_jsfx();
 
 namespace {
 
@@ -17,12 +17,12 @@ void Init(Local<Object> exports, Local<Object> module) {
 
   Local<Function> constructor = Nan::GetFunction(tpl).ToLocalChecked();
   Local<Object> instance = constructor->NewInstance(Nan::GetCurrentContext()).ToLocalChecked();
-  Nan::SetInternalFieldPointer(instance, 0, tree_sitter_eel());
+  Nan::SetInternalFieldPointer(instance, 0, tree_sitter_jsfx());
 
-  Nan::Set(instance, Nan::New("name").ToLocalChecked(), Nan::New("eel").ToLocalChecked());
+  Nan::Set(instance, Nan::New("name").ToLocalChecked(), Nan::New("jsfx").ToLocalChecked());
   Nan::Set(module, Nan::New("exports").ToLocalChecked(), instance);
 }
 
-NODE_MODULE(tree_sitter_eel_binding, Init)
+NODE_MODULE(tree_sitter_jsfx_binding, Init)
 
 }  // namespace

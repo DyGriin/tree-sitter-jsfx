@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "tree_sitter_eel_binding",
+      "target_name": "tree_sitter_jsfx_binding",
       "include_dirs": [
         "<!(node -e \"require('nan')\")",
         "src"
